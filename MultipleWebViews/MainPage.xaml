@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:MultipleWebViews.Controls"
+             mc:Ignorable="d"
+             x:Class="MultipleWebViews.MainPage">
+
+    <ListView x:Name="lstView" HasUnevenRows="True" VerticalOptions="FillAndExpand" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="30" />
+
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="Start" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="0" />
+                        <custom:HybridWebView Grid.Row="1" Id="{Binding Id}" messageContent="{ Binding Name}" />
+                        <Label Grid.Row="2" Text="End" BackgroundColor="Pink" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+
+
+</ContentPage>

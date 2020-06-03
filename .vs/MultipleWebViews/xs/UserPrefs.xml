@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{BBCC269B-CA2A-44FF-962F-442EC1EB5A52}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MultipleWebViews.iOS/Renderers/HybridWebViewRenderer.cs">
+    <Files>
+      <File FileName="MultipleWebViews/Controls/HybridWebView.cs" Line="104" Column="38" />
+      <File FileName="MultipleWebViews/MainPage.xaml" Line="25" Column="1" />
+      <File FileName="MultipleWebViews/MainPage.xaml.cs" Line="29" Column="61" />
+      <File FileName="MultipleWebViews.iOS/Renderers/HybridWebViewRenderer.cs" Line="7" Column="34" />
+      <File FileName="MultipleWebViews.iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MultipleWebViews" expanded="True">
+            <Node name="MultipleWebViews" expanded="True">
+              <Node name="Controls" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="MultipleWebViews.iOS" expanded="True">
+              <Node name="Renderers" expanded="True">
+                <Node name="HybridWebViewRenderer.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MultipleWebViews.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.93ED7478-78C5-4702-8381-EE98E5EAABBE" />
+  <MonoDevelop.Ide.ItemProperties.MultipleWebViews.Android FirstBuild="True" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
