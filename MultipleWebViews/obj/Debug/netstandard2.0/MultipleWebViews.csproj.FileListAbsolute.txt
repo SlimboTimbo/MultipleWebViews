@@ -25,3 +25,4 @@ C:\Users\tima\source\repos\MultipleWebViews\MultipleWebViews\obj\Debug\netstanda
 C:\Users\tima\source\repos\MultipleWebViews\MultipleWebViews\obj\Debug\netstandard2.0\MultipleWebViews.dll
 C:\Users\tima\source\repos\MultipleWebViews\MultipleWebViews\obj\Debug\netstandard2.0\ref\MultipleWebViews.dll
 C:\Users\tima\source\repos\MultipleWebViews\MultipleWebViews\obj\Debug\netstandard2.0\MultipleWebViews.pdb
+C:\Users\tima\source\repos\MultipleWebViews\MultipleWebViews\obj\Debug\netstandard2.0\MultipleWebViews.csprojAssemblyReference.cache

@@ -9,6 +9,7 @@ using Xamarin.Forms.Platform.iOS;
 using MultipleWebViews.Controls;
 using MultipleWebViews.iOS.Renderers;
 using CoreGraphics;
+using System.Drawing;
 
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
 namespace MultipleWebViews.iOS.Renderers
@@ -84,8 +85,14 @@ namespace MultipleWebViews.iOS.Renderers
                 var _webView = webViewRenderer.Element as HybridWebView;
                 if (_webView != null)
                 {
+
                     await System.Threading.Tasks.Task.Delay(100);
-                    var result = (double)webView.ScrollView.ContentSize.Height;
+                    var resultWidth = (double)webView.ScrollView.ContentSize.Width;
+                    var resultHeight = (double)webView.ScrollView.ContentSize.Height;
+                    System.Console.WriteLine("----" + resultWidth + "-----" + resultHeight + "----" + _webView.Width);
+
+                    double result = MeasureTextHeightSize(_webView.messageContent, _webView.Width, UIFont.LabelFontSize, null);
+
                     _webView.HeightRequest = result;
 
                     MessagingCenter.Send<Object, PassModel>(this, "LoadFinished", new PassModel(_webView.Id, Convert.ToDouble(result)));
@@ -96,5 +103,28 @@ namespace MultipleWebViews.iOS.Renderers
                 Console.WriteLine("Error at HybridWebViewRenderer LoadingFinished: " + ex.Message);
             }
         }
+
+        private double MeasureTextHeightSize(string text, double width, double fontSize, string fontName = null)
+        {
+            var nsText = new NSString(text);
+            var boundSize = new SizeF((float)width, float.MaxValue);
+            var options = NSStringDrawingOptions.UsesFontLeading | NSStringDrawingOptions.UsesLineFragmentOrigin;
+
+            if (fontName == null)
+            {
+                fontName = "HelveticaNeue";
+            }
+
+            var attributes = new UIStringAttributes
+            {
+                Font = UIFont.FromName(fontName, (float)fontSize)
+            };
+
+            var sizeF = nsText.GetBoundingRect(boundSize, options, attributes, null).Size;
+
+            //return new Xamarin.Forms.Size((double)sizeF.Width, (double)sizeF.Height);
+            return (double)sizeF.Height;
+        }
+
     }
 }
